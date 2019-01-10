@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "damerau-levenshtein"
 require "email_inquire/validator/base"
 
 module EmailInquire
