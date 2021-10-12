@@ -10,6 +10,7 @@ btinternet.com
 charter.net
 cox.net
 free.fr
+ge.com
 gmail.com
 gmx.fr
 googlemail.com
