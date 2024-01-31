@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
   spec.homepage = "https://github.com/maximeg/email_inquire"
   spec.license = "MIT"
 
-  spec.required_ruby_version = ">= 2.3.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   spec.files =
     `git ls-files -z`.split("\x0").reject do |f|
@@ -25,10 +25,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency("bundler", "~> 2.0")
-  spec.add_development_dependency("rake", "~> 10.0")
-  spec.add_development_dependency("rspec", "~> 3.9.0")
-  spec.add_development_dependency("rubocop", "~> 0.78.0")
-  spec.add_development_dependency("rubocop-performance", "~> 1.5.0")
-  spec.add_development_dependency("rubocop-rspec", "~> 1.37.0")
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "standard-rails"
 end

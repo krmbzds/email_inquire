@@ -5,16 +5,8 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in email_inquire.gemspec
 gemspec
 
-group :local do
-  # Guard
-  gem "guard-rspec", require: false
-  gem "guard-rubocop", require: false
-  gem "terminal-notifier-guard", require: false # OS X
-
+group :development do
   # Mutation testing
   gem "mutant-rspec", require: false
+  gem "standard-rails", require: false
 end
-
-# Code coverage
-gem "codecov", require: false
-gem "simplecov", require: false
