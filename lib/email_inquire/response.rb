@@ -2,7 +2,6 @@
 
 module EmailInquire
   class Response
-
     attr_reader :email
     attr_accessor :replacement, :status
 
@@ -46,6 +45,5 @@ module EmailInquire
     def valid?
       status.equal?(:valid)
     end
-
   end
 end

@@ -4,13 +4,13 @@ require "spec_helper"
 
 RSpec.describe "Case: Other typos", type: :feature do
   {
-    "john.doe@domain.com.com" => "john.doe@domain.com",
+    "john.doe@domain.com.com" => "john.doe@domain.com"
   }.each do |kase, hint|
     it "proposes a hint for `#{kase}`" do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: hint,
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -22,7 +22,7 @@ RSpec.describe "Case: Other typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@aliceadsl.fr",
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -34,7 +34,7 @@ RSpec.describe "Case: Other typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@aol.com",
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -47,7 +47,7 @@ RSpec.describe "Case: Other typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@aim.com",
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -59,7 +59,7 @@ RSpec.describe "Case: Other typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@numericable.fr",
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -75,7 +75,7 @@ RSpec.describe "Case: Other typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@sfr.fr",
-        status: :hint,
+        status: :hint
       })
     end
   end

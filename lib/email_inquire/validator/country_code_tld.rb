@@ -7,12 +7,11 @@ require "email_inquire/validator/common_provider"
 module EmailInquire
   module Validator
     class CountryCodeTld < Base
-
       COUNTRY_CODE_TLDS = [
         # TLD, generic com, all generic, registration with TLD only is possible
         ["jp", "co", load_data("country_code_tld/jp").freeze, true].freeze,
         ["uk", "co", load_data("country_code_tld/uk").freeze, true].freeze,
-        ["br", "com", load_data("country_code_tld/br").freeze, true].freeze,
+        ["br", "com", load_data("country_code_tld/br").freeze, true].freeze
       ].freeze
 
       def initialize(email)
@@ -45,7 +44,7 @@ module EmailInquire
         provider_domain = [
           sld,
           generic_com,
-          cctld,
+          cctld
         ].join(".")
 
         return unless CommonProvider::DOMAINS.include?(provider_domain)
@@ -58,7 +57,7 @@ module EmailInquire
           *rest,
           (sld if sld.length > 2),
           generic_com,
-          cctld,
+          cctld
         ].compact.join(".")
 
         response.hint!(domain: replacement)
@@ -72,7 +71,7 @@ module EmailInquire
           *rest,
           sld.sub(/#{generic_at_end_of_sld}\z/, ""),
           generic_at_end_of_sld,
-          cctld,
+          cctld
         ].join(".")
 
         response.hint!(domain: replacement)
@@ -96,7 +95,6 @@ module EmailInquire
 
         hint_for_generic_com(cctld, generic_com) if sld.length <= 2 || !registration_with_cctld
       end
-
     end
   end
 end

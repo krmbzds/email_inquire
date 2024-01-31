@@ -1,14 +1,11 @@
 # frozen_string_literal: true
 
-require "set"
 require "email_inquire/response"
 
 module EmailInquire
   module Validator
     class Base
-
       class << self
-
         def validate(email)
           new(email).validate
         end
@@ -24,7 +21,6 @@ module EmailInquire
 
           lines.to_set
         end
-
       end
 
       def initialize(email)
@@ -43,7 +39,6 @@ module EmailInquire
       def response
         @response ||= Response.new(email: email)
       end
-
     end
   end
 end

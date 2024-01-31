@@ -29,7 +29,7 @@ RSpec.describe EmailInquire::Inquirer do
         "#{described_class}::VALIDATORS", [
           class_double("EmailInquire::Validator::Base", validate: nil),
           class_double("EmailInquire::Validator::Base", validate: expected_response),
-          class_double("EmailInquire::Validator::Base", validate: other_response),
+          class_double("EmailInquire::Validator::Base", validate: other_response)
         ]
       )
 
@@ -40,14 +40,14 @@ RSpec.describe EmailInquire::Inquirer do
       stub_const(
         "#{described_class}::VALIDATORS", [
           class_double("EmailInquire::Validator::Base", validate: nil),
-          class_double("EmailInquire::Validator::Base", validate: nil),
+          class_double("EmailInquire::Validator::Base", validate: nil)
         ]
       )
 
       expect(subject.validate).to be_a(EmailInquire::Response).and have_attributes({
         email: "john.doe@domain.com",
         status: :valid,
-        replacement: nil,
+        replacement: nil
       })
     end
 

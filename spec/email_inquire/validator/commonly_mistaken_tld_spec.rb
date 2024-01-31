@@ -8,7 +8,7 @@ RSpec.describe EmailInquire::Validator::CommonlyMistakenTld do
       stub_const(
         "#{described_class}::MISTAKES",
         {
-          ".foobar" => ".foo.bar",
+          ".foobar" => ".foo.bar"
         }.freeze
       )
     end

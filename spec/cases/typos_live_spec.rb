@@ -13,7 +13,7 @@ RSpec.describe "Case: Live typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@live.com",
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -29,7 +29,7 @@ RSpec.describe "Case: Live typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@live.fr",
-        status: :hint,
+        status: :hint
       })
     end
   end

@@ -15,7 +15,7 @@ RSpec.describe "Case: BR TLD", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@domain.com.br",
-        status: :hint,
+        status: :hint
       })
     end
   end

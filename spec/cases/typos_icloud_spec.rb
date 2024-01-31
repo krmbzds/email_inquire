@@ -11,7 +11,7 @@ RSpec.describe "Case: iCloud typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@icloud.com",
-        status: :hint,
+        status: :hint
       })
     end
   end

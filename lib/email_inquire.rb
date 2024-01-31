@@ -4,7 +4,6 @@ require "email_inquire/version"
 require "email_inquire/inquirer"
 
 module EmailInquire
-
   def self.validate(email)
     inquirer = Inquirer.new(email)
     inquirer.validate
@@ -41,5 +40,4 @@ module EmailInquire
   def self.custom_valid_domains
     @custom_valid_domains ||= Set.new
   end
-
 end

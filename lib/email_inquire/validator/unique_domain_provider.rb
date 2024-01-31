@@ -5,7 +5,6 @@ require "email_inquire/validator/base"
 module EmailInquire
   module Validator
     class UniqueDomainProvider < Base
-
       DOMAINS = load_data("unique_domain_providers").freeze
 
       def validate
@@ -22,7 +21,6 @@ module EmailInquire
 
         response.hint!(domain: replacement_domain) if replacement_domain
       end
-
     end
   end
 end

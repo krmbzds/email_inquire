@@ -122,7 +122,7 @@ RSpec.describe EmailInquire::Validator::CountryCodeTld do
           stub_const(
             "#{described_class}::COUNTRY_CODE_TLDS",
             [
-              ["xx", "comi", %w[comi foo bar].freeze, true].freeze,
+              ["xx", "comi", %w[comi foo bar].freeze, true].freeze
             ].freeze
           )
 
@@ -130,7 +130,7 @@ RSpec.describe EmailInquire::Validator::CountryCodeTld do
             "EmailInquire::Validator::CommonProvider::DOMAINS",
             [
               "provider.comi.xx",
-              "otherprovider.comim",
+              "otherprovider.comim"
             ].freeze
           )
         end
@@ -155,14 +155,14 @@ RSpec.describe EmailInquire::Validator::CountryCodeTld do
           stub_const(
             "#{described_class}::COUNTRY_CODE_TLDS",
             [
-              ["xx", "comi", %w[comi foo bar].freeze, false].freeze,
+              ["xx", "comi", %w[comi foo bar].freeze, false].freeze
             ].freeze
           )
 
           stub_const(
             "EmailInquire::Validator::CommonProvider::DOMAINS",
             [
-              "provider.comi.xx",
+              "provider.comi.xx"
             ].freeze
           )
         end

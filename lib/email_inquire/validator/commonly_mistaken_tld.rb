@@ -5,12 +5,11 @@ require "email_inquire/validator/base"
 module EmailInquire
   module Validator
     class CommonlyMistakenTld < Base
-
       MISTAKES = {
         ".combr" => ".com.br",
         ".cojp" => ".co.jp",
         ".couk" => ".co.uk",
-        ".com.com" => ".com",
+        ".com.com" => ".com"
       }.freeze
 
       def validate
@@ -23,7 +22,6 @@ module EmailInquire
 
         response.hint!(domain: domain.sub(/#{mistake}\z/, reference)) if reference
       end
-
     end
   end
 end

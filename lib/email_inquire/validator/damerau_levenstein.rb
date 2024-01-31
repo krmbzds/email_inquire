@@ -43,8 +43,8 @@ module DamerauLevenshtein
         half_sl = (sl - 1) / 2
         half_tl = (tl - 1) / 2
 
-        block = block_size < half_sl || half_sl.zero? ? block_size : half_sl
-        block = block < half_tl || half_tl.zero? ? block : half_tl
+        block = (block_size < half_sl || half_sl.zero?) ? block_size : half_sl
+        block = (block < half_tl || half_tl.zero?) ? block : half_tl
 
         while block >= 1
           swap1 = 1

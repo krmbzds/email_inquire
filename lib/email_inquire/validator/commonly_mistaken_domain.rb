@@ -5,10 +5,9 @@ require "email_inquire/validator/base"
 module EmailInquire
   module Validator
     class CommonlyMistakenDomain < Base
-
       MISTAKES = {
         /google(?!mail)/ => "gmail.com",
-        /windows.*\.com/ => "live.com",
+        /windows.*\.com/ => "live.com"
       }.freeze
 
       def validate
@@ -21,7 +20,6 @@ module EmailInquire
 
         response.hint!(domain: reference) if reference
       end
-
     end
   end
 end

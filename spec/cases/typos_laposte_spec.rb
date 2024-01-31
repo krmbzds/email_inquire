@@ -18,7 +18,7 @@ RSpec.describe "Case: La Poste typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@laposte.net",
-        status: :hint,
+        status: :hint
       })
     end
   end

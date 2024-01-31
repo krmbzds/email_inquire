@@ -13,7 +13,7 @@ RSpec.describe "Case: UK TLD", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@domain.co.uk",
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -54,13 +54,13 @@ RSpec.describe "Case: UK TLD", type: :feature do
     "john.doe@blueyonder.uk" => "john.doe@blueyonder.co.uk",
     "john.doe@hotmail.uk" => "john.doe@hotmail.co.uk",
     "john.doe@live.uk" => "john.doe@live.co.uk",
-    "john.doe@yahoo.uk" => "john.doe@yahoo.co.uk",
+    "john.doe@yahoo.uk" => "john.doe@yahoo.co.uk"
   }.each do |kase, hint|
     it "proposes a hint for `#{kase}`" do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: hint,
-        status: :hint,
+        status: :hint
       })
     end
   end

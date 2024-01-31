@@ -22,7 +22,7 @@ RSpec.describe "Case: Yahoo typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@yahoo.com",
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -48,7 +48,7 @@ RSpec.describe "Case: Yahoo typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@yahoo.fr",
-        status: :hint,
+        status: :hint
       })
     end
   end
@@ -61,7 +61,7 @@ RSpec.describe "Case: Yahoo typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@yahoo.co.uk",
-        status: :hint,
+        status: :hint
       })
     end
   end

@@ -27,4 +27,4 @@ RSpec.configure do |config|
   end
 end
 
-DOMAIN_REGEXP_SPEC = /\A[a-z0-9.-]+[a-z0-9]\.[a-z]+\z/.freeze
+DOMAIN_REGEXP_SPEC = /\A[a-z0-9.-]+[a-z0-9]\.[a-z]+\z/

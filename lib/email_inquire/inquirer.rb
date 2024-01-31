@@ -16,7 +16,6 @@ require "email_inquire/validator/unique_domain_provider"
 
 module EmailInquire
   class Inquirer
-
     VALIDATORS = [
       # Format first
       EmailInquire::Validator::EmailFormat,
@@ -37,7 +36,7 @@ module EmailInquire
       EmailInquire::Validator::CommonlyMistakenDomain,
       EmailInquire::Validator::CommonlyMistakenTld,
       EmailInquire::Validator::CountryCodeTld,
-      EmailInquire::Validator::UniqueDomainProvider,
+      EmailInquire::Validator::UniqueDomainProvider
     ].freeze
 
     def initialize(email)
@@ -51,6 +50,5 @@ module EmailInquire
 
       response || Response.new(email: email).valid!
     end
-
   end
 end

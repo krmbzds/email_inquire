@@ -13,7 +13,7 @@ RSpec.describe "Case: Free typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@free.fr",
-        status: :hint,
+        status: :hint
       })
     end
   end

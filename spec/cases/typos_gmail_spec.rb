@@ -55,7 +55,7 @@ RSpec.describe "Case: Gmail typos", type: :feature do
       response = EmailInquire.validate(kase)
       expect(response).to have_attributes({
         replacement: "john.doe@gmail.com",
-        status: :hint,
+        status: :hint
       })
     end
   end

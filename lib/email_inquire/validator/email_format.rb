@@ -5,7 +5,6 @@ require "email_inquire/validator/base"
 module EmailInquire
   module Validator
     class EmailFormat < Base
-
       DOMAIN_REGEXP = /
         \A
         (?:
@@ -22,16 +21,16 @@ module EmailInquire
         ){1,8}
         [a-z]{2,63}
         \z
-      /x.freeze
+      /x
 
-      NAME_ALLOWED_CHARS = "a-z0-9._%+-".freeze
+      NAME_ALLOWED_CHARS = "a-z0-9._%+-"
 
       NAME_REGEXP = /
         \A
         [a-z0-9]
         [#{NAME_ALLOWED_CHARS}]{0,63}
         \z
-      /ix.freeze
+      /ix
 
       # Relevant literature:
       # http://emailregex.com/email-validation-summary/
@@ -50,7 +49,6 @@ module EmailInquire
       def name_valid?
         name =~ NAME_REGEXP
       end
-
     end
   end
 end
